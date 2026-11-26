@@ -1,0 +1,39 @@
+name: Задача
+description: Добавить задачу в командный проект
+title: "Задача: "
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Ожидаемый результат
+      description: Что должно быть сделано и для кого?
+      placeholder: Опишите результат, который можно проверить.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Критерии приёмки
+      description: Как понять, что задача выполнена?
+      placeholder: |
+        - [ ] ...
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Приоритет
+      options:
+        - P0 — Срочно
+        - P1 — Высокий
+        - P2 — Обычный
+        - P3 — Низкий
+    validations:
+      required: true
+  - type: textarea
+    id: links
+    attributes:
+      label: Контекст и ссылки
+      description: Дополнительные детали, зависимости или полезные материалы.
+    validations:
+      required: false
